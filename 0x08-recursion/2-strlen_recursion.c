@@ -1,5 +1,5 @@
 /*
- * file: 2-strlen_recursion.c
+ * File: 2-strlen_recursion.c
  * Auth: smone
  */
 
