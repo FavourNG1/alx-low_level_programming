@@ -1,18 +1,19 @@
-#include "main.h"
-
 /**
- * print_chessboard - a function that prints a chessboard
- * @a: an array input to print
- * Return: Nothing
+ * my_pal - recursive check of palindrome
+ * @s: string
+ * @l: length of string
+ * Return: 1 if palindrome, 0 if not
  */
-void print_chessboard(char (*a)[8])
-{
-int i = 0, j;
 
-for (; i < 8; i++)
+int my_pal(char *s, int l)
 {
-for (j = 0; j < 8; j++)
-_putchar(a[i][j]);
-_putchar('\n');
-}
+	if (*s == *(s + l))
+	{
+		if (l <= 0)
+			return (1);
+		else
+			return (my_pal(++s, l - 2));
+	}
+	else
+		return (0);
 }
